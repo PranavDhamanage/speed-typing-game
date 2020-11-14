@@ -1,0 +1,88 @@
+$theme-color: greenyellow;
+@mixin borders {
+  outline: none;
+  border: none;
+}
+
+body {
+  padding: 0em;
+  margin: 0em;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  color: $theme-color;
+}
+
+.App {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*************
+    time 
+*************/
+.time-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  border-radius: 7px;
+}
+
+.time {
+  font-size: 1.7rem;
+}
+
+.select-time {
+  cursor: pointer;
+  @include borders();
+  background-color: $theme-color;
+  padding: 0.5em 1.5em;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/*********
+typography
+**********/
+.typing-area {
+  @include borders();
+  background-color: $theme-color;
+  padding: 0.3em 0.5em;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  height: 15em;
+  border-radius: 7px;
+}
+
+.btn {
+  @include borders();
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  background-color: $theme-color;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  transition: all ease-in-out 150ms;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  &:hover {
+    background-color: green;
+  }
+}
+
+.btn:disabled,
+.typing-area:disabled {
+  background-color: lightblue;
+  cursor: not-allowed;
+}
+
+/***************
+select drop down
+****************/
